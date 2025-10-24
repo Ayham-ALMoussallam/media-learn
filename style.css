@@ -136,6 +136,8 @@ section h2::before {
   font-size: 1.2em;
 }
 
+
+
 /* الوسائط */
 .media {
   width: 100%;
@@ -268,5 +270,4 @@ footer a:hover {
     font-size: 20px;
   }
 }
-
 
