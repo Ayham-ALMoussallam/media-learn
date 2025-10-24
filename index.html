@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>أنواع الوسائط المتعددة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- تأكد أن ملف CSS اسمه style.css -->
+  <link rel="icon" sizes="64x64" href="img/Logo Icon.png" type="image/png">
+</head>
+<body>
+
+ <header>
+  <div class="header-content">
+    <h1>أنواع الوسائط المتعددة وتطبيقاتها</h1>
+    <img src="img/Logo.png" alt="شعار الجامعة" class="logo" width="400" height="1000">
+
+  </div>
+</header>
+
+
+  <nav>
+  <ul>
+    <li><a href="#text">النصوص</a></li>
+    <li><a href="#images">الصور</a></li>
+    <li><a href="#audio">الصوت</a></li>
+    <li><a href="#video">الفيديو</a></li>
+    <li><a href="#animation">الرسوم المتحركة</a></li>
+    <li><a href="#interactivity">التفاعل</a></li>
+  </ul>
+</nav>
+
+ <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="ابحث هنا..." />
+  <button id="searchButton"><i class="fas fa-search"></i> بحث</button>
+</div>
+
+<section id="text">
+  <h2><i class="fas fa-font"></i> النصوص (Text)</h2>
+  <p>النصوص تُعد من أبسط أنواع الوسائط، وتُستخدم لنقل المعلومات بشكل مباشر، مثل العناوين والمقالات والشروحات.</p>
+</section>
+
+<section id="images">
+  <h2><i class="fas fa-image"></i> الصور (Images)</h2>
+  <img src="multimedia.webp" alt="أنواع الوسائط المتعددة" class="media">
+  <p>الصورة توضح تصنيف الوسائط المتعددة في التعليم الإلكتروني.</p>
+</section>
+
+
+<section id="audio">
+  <h2><i class="fas fa-volume-up"></i> الصوت (Audio)</h2>
+  <p>المقاطع الصوتية تُضيف بعدًا سمعيًا للتعلم، وتُستخدم في الشروحات أو الخلفيات الصوتية.</p>
+</section>
+
+<section id="video">
+  <h2><i class="fas fa-video"></i> الفيديو (Video)</h2>
+  <video class="media" controls>
+    <source src="intro.mp4" type="video/mp4">
+    المتصفح لا يدعم تشغيل الفيديو.
+  </video>
+  <p>هذا الفيديو يشرح مفهوم الوسائط المتعددة بطريقة مرئية ومبسطة، ويجمع بين الصوت والصورة لتوضيح الفكرة.</p>
+</section>
+
+
+<section id="animation">
+  <h2><i class="fas fa-film"></i> الرسوم المتحركة (Animation)</h2>
+  <p>الرسوم المتحركة تُستخدم لتبسيط الأفكار المعقدة بطريقة مرئية ممتعة، خاصة في المحتوى الموجه للأطفال.</p>
+</section>
+
+<section id="interactivity">
+  <h2><i class="fas fa-mouse-pointer"></i> التفاعل (Interactivity)</h2>
+  <p>العناصر التفاعلية مثل الأزرار والاختبارات تُشرك المستخدم في عملية التعلم وتزيد من الفهم والتحفيز.</p>
+</section>
+<section id="ai-content">
+  <h2><i class="fas fa-lightbulb"></i> الفرق بين الوسائط التفاعلية وغير التفاعلية</h2>
+  <p>
+    تُقسم الوسائط المتعددة في التعليم إلى نوعين رئيسيين:  
+    <strong>الوسائط التفاعلية</strong> التي تتيح للطالب التفاعل المباشر مع المحتوى، مثل التحكم في عرض المعلومات، الإجابة على الأسئلة، أو المشاركة في محاكاة تعليمية.  
+    و<strong>الوسائط غير التفاعلية</strong> التي تقدم المعلومات بشكل ثابت مثل النصوص أو الصور أو الفيديوهات، وتُستخدم غالبًا لعرض المحتوى بشكل مباشر دون تدخل المستخدم.  
+    اختيار النوع المناسب يعتمد على الهدف التعليمي وطبيعة المادة الدراسية، حيث تُستخدم الوسائط التفاعلية لتعزيز الفهم والمشاركة، بينما تُستخدم الوسائط غير التفاعلية لتقديم المعلومات بشكل واضح وسريع.
+  </p>
+</section>
+
+
+  <footer>
+    <p>© 2025 جميع الحقوق محفوظة | تصميم بواسطة فريقك</p>
+    <p><a href="#">سياسة الخصوصية</a> | <a href="#">الشروط والأحكام</a></p>
+  </footer>
+<script>
+document.getElementById("searchButton").addEventListener("click", function () {
+  const query = document.getElementById("searchInput").value.trim().toLowerCase();
+  const sections = document.querySelectorAll("section");
+  let matchFound = false;
+
+  sections.forEach(section => {
+    const content = section.textContent.toLowerCase();
+    if (content.includes(query)) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      section.style.border = "2px solid #F39C12";
+      setTimeout(() => {
+        section.style.border = "none";
+      }, 2000);
+      matchFound = true;
+    }
+  });
+
+  if (!matchFound) {
+    alert("لم يتم العثور على نتائج مطابقة.");
+  }
+});
+</script>
+
+
+</body>
+</html>

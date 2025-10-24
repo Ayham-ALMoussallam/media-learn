@@ -1,0 +1,255 @@
+/* إعدادات عامة */
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  text-align: right;
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* رأس الصفحة */
+header {
+  background: #102254; /* كحلي جامعي */
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-bottom: 4px solid #0F172A; /* خط سفلي داكن */
+}
+
+h1 {
+  text-align: center;
+  color: #F1F5F9; /* أبيض فاتح */
+  margin-bottom: 24px;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+
+/* الشعار */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+  margin-left: 10px;
+}
+
+
+/* شريط التنقل */
+nav {
+  background-color: #6c6c6c;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: row-reverse;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #2C3E50;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* شريط البحث */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 10px;
+}
+
+.search-bar input {
+  width: 70%;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: #102254;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #e67e22;
+}
+
+/* الأقسام */
+section {
+  padding: 30px 20px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+}
+
+section h2 {
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+section h2::before {
+  content: "• ";
+  color: #F39C12;
+  font-size: 1.2em;
+}
+
+/* الوسائط */
+.media {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* الأزرار */
+button {
+  background-color: #3498DB;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980B9;
+}
+
+/* ملاحظات الذكاء الاصطناعي */
+.ai-note {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* الفوتر */
+footer {
+  background-color: #2C3E50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #F39C12;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  section {
+    margin: 10px;
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar input {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .search-bar button {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .media {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin: 15px 0;
+}
+#ai-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  margin-top: 30px;
+  line-height: 1.8;
+}
+
+}
+@media (max-width: 600px) {
+  .logo {
+    width: 40px;
+    margin-left: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
