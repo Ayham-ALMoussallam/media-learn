@@ -54,6 +54,11 @@
 <section id="audio">
   <h2><i class="fas fa-volume-up"></i> الصوت (Audio)</h2>
   <p>المقاطع الصوتية تُضيف بعدًا سمعيًا للتعلم، وتُستخدم في الشروحات أو الخلفيات الصوتية.</p>
+          <audio controls style="width: 50%;">
+          <source src="aud/1.mp3" type="audio/mp3">
+          المتصفح لا يدعم تشغيل الصوت.
+        </audio>
+        <p>مشغل صوت 
 </section>
 
 <section id="video">
@@ -77,15 +82,65 @@
 <section id="interactivity">
   <h2><i class="fas fa-mouse-pointer"></i> التفاعل (Interactivity)</h2>
   <p>العناصر التفاعلية مثل الأزرار والاختبارات تُشرك المستخدم في عملية التعلم وتزيد من الفهم والتحفيز.</p>
-</section>
-<section id="ai-content">
-  <h2><i class="fas fa-lightbulb"></i> الفرق بين الوسائط التفاعلية وغير التفاعلية</h2>
-  <p>
-    تُقسم الوسائط المتعددة في التعليم إلى نوعين رئيسيين:  
-    <strong>الوسائط التفاعلية</strong> التي تتيح للطالب التفاعل المباشر مع المحتوى، مثل التحكم في عرض المعلومات، الإجابة على الأسئلة، أو المشاركة في محاكاة تعليمية.  
-    و<strong>الوسائط غير التفاعلية</strong> التي تقدم المعلومات بشكل ثابت مثل النصوص أو الصور أو الفيديوهات، وتُستخدم غالبًا لعرض المحتوى بشكل مباشر دون تدخل المستخدم.  
-    اختيار النوع المناسب يعتمد على الهدف التعليمي وطبيعة المادة الدراسية، حيث تُستخدم الوسائط التفاعلية لتعزيز الفهم والمشاركة، بينما تُستخدم الوسائط غير التفاعلية لتقديم المعلومات بشكل واضح وسريع.
-  </p>
+  
+  <div class="interactive-demo">
+    <h3>مختبر الوسائط التفاعلية</h3>
+    
+    <!-- تحكم في الوسائط -->
+    <div class="control-panel">
+      <div class="control-group">
+        <label>اختر نوع الوسائط:</label>
+        <select id="mediaType" onchange="changeMediaType()">
+          <option value="text">نص</option>
+          <option value="image">صورة</option>
+          <option value="audio">صوت</option>
+          <option value="video">فيديو</option>
+        </select>
+      </div>
+      
+      <div class="control-group">
+        <label>حجم الخط:</label>
+        <input type="range" id="fontSize" min="14" max="30" value="18" oninput="updateStyles()">
+      </div>
+      
+      <div class="control-group">
+        <label>لون الخلفية:</label>
+        <input type="color" id="bgColor" value="#ffffff" oninput="updateStyles()">
+      </div>
+    </div>
+    
+    <!-- منطقة العرض -->
+    <div id="interactive-content" class="interactive-content">
+      <div id="text-content" class="media-content active">
+        <h4>هذا مثال على النص التفاعلي</h4>
+        <p>يمكنك تغيير مظهر هذا النص باستخدام أدوات التحكم على اليسار.</p>
+      </div>
+      
+      <div id="image-content" class="media-content">
+        <img src="img/6.gif" alt="مثال تفاعلي" style="max-width: 100%; border-radius: 8px;">
+        <p>صورة تفاعلية - جرب تغيير الخلفية!</p>
+      </div>
+      
+      <div id="audio-content" class="media-content">
+        <audio controls style="width: 100%;">
+          <source src="aud/1.mp3" type="audio/mp3">
+          المتصفح لا يدعم تشغيل الصوت.
+        </audio>
+        <p>مشغل صوت تفاعلي</p>
+      </div>
+      
+      <div id="video-content" class="media-content">
+        <video controls style="max-width: 100%; border-radius: 8px;">
+          <source src="vid/1.mp4" type="video/mp4">
+          المتصفح لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+    </div>
+    
+    <div class="demo-info">
+      <p><i class="fas fa-lightbulb"></i> هذا مثال حي على كيف يمكن للتفاعل تحسين تجربة التعلم!</p>
+    </div>
+  </div>
 </section>
 
 
@@ -93,30 +148,7 @@
     <p>© 2025 جميع الحقوق محفوظة | تصميم بواسطة فريقك</p>
     <p><a href="#">سياسة الخصوصية</a> | <a href="#">الشروط والأحكام</a></p>
   </footer>
-<script>
-document.getElementById("searchButton").addEventListener("click", function () {
-  const query = document.getElementById("searchInput").value.trim().toLowerCase();
-  const sections = document.querySelectorAll("section");
-  let matchFound = false;
 
-  sections.forEach(section => {
-    const content = section.textContent.toLowerCase();
-    if (content.includes(query)) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-      section.style.border = "2px solid #F39C12";
-      setTimeout(() => {
-        section.style.border = "none";
-      }, 2000);
-      matchFound = true;
-    }
-  });
-
-  if (!matchFound) {
-    alert("لم يتم العثور على نتائج مطابقة.");
-  }
-});
-</script>
-
-
+<script src="js.js"></script>
 </body>
 </html>
